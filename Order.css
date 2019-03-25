@@ -1,0 +1,8 @@
+.veg {
+    visibility:hidden;
+}
+
+input[type=checkbox]:checked ~ .veg {
+    visibility:visible;
+
+}

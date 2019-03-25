@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="Order.css">
+  </head>
+  <body>
+    <p> Select Your Pizzas </p>
+    <form class="" action="index.html" method="post">
+          <div class="veg-container" style="float:left">
+              <div class="pizza-container">
+                <input type="checkbox" id="cbox1" name="Veg-pizza1" value="" /><label> Margherita</label>
+                <div class="veg" id="veg_cbox1" >
+                    <label for="text"> Enter Quantity</label>  <input type="text" name="" value="" />
+                     <input type="radio" name="type" value="" /><label>Small</label>
+                     <input type="radio" name="type" value="" /> <label>Medium</label>
+                     <input type="radio" name="type" value="" /> <label>Large</label>
+
+                </div>
+                <div class="pizza-container">
+                  <input type="checkbox" id="cbox2" name="Veg-pizza2" value="" /><label> Double Cheese Margherita</label>
+                  <div class="veg" id="veg_cbox2" >
+                      <label for="text"> Enter Quantity</label>  <input type="text" name="" value="" />
+                       <input type="radio" name="type" value="" /><label>Small</label>
+                       <input type="radio" name="type" value="" /> <label>Medium</label>
+                       <input type="radio" name="type" value="" /> <label>Large</label>
+
+                  </div>
+
+                  <div class="pizza-container">
+                    <input type="checkbox" id="cbox3" name="Veg-pizza3" value="" /><label> Farmhouse</label>
+                    <div class="veg" id="veg_cbox3" >
+                        <label for="text"> Enter Quantity</label>  <input type="text" name="" value="" />
+                         <input type="radio" name="type" value="" /><label>Small</label>
+                         <input type="radio" name="type" value="" /> <label>Medium</label>
+                         <input type="radio" name="type" value="" /> <label>Large</label>
+
+                    </div>
+
+                    <div class="pizza-container">
+                      <input type="checkbox" id="cbox4" name="Veg-pizza4" value="" /><label> Peppy Paneer</label>
+                      <div class="veg" id="veg_cbox4" >
+                          <label for="text"> Enter Quantity</label>  <input type="text" name="" value="" />
+                           <input type="radio" name="type" value="" /><label>Small</label>
+                           <input type="radio" name="type" value="" /> <label>Medium</label>
+                           <input type="radio" name="type" value="" /> <label>Large</label>
+
+                      </div>
+
+                      <div class="pizza-container">
+                        <input type="checkbox" id="cbox5" name="Veg-pizza5" value="" /><label> Veg Extravaganza</label>
+                        <div class="veg" id="veg_cbox5" >
+                            <label for="text"> Enter Quantity</label>  <input type="text" name="" value="" />
+                             <input type="radio" name="type" value="" /><label>Small</label>
+                             <input type="radio" name="type" value="" /> <label>Medium</label>
+                             <input type="radio" name="type" value="" /> <label>Large</label>
+
+                        </div>
+
+                        <div class="pizza-container">
+                          <input type="checkbox" id="cbox6" name="Veg-pizza6" value="" /><label> Veggie Paradise</label>
+                          <div class="veg" id="veg_cbox6" >
+                              <label for="text"> Enter Quantity</label>  <input type="text" name="" value="" />
+                               <input type="radio" name="type" value="" /><label>Small</label>
+                               <input type="radio" name="type" value="" /> <label>Medium</label>
+                               <input type="radio" name="type" value="" /> <label>Large</label>
+
+                          </div>
+
+              </div>
+
+          </div>
+
+    </form>
+    <script>
+          function check(cb)
+          {
+            var status=cb.checked;
+            var id=cb.id;
+
+            id="veg_"+String(id);
+
+
+            if(status==true)
+            {
+              alert(id);
+              document.getElementById(id).style.visibility="visible";
+            }
+            else
+            {
+              document.getElementsByClassName(id).style.visibility="hidden";
+
+            }
+
+          }
+    </script>
+  </body>
+</html>
