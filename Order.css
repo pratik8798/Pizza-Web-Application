@@ -1,8 +1,49 @@
-.veg {
+
+#veg-container {
     visibility:hidden;
+    width:100%;
+    position: absolute;
+
 }
 
+#nonveg-container {
+    visibility: hidden;
+    width:100%;
+    position: absolute;
+
+}
+
+#both-container {
+    visibility: hidden;
+    width:100%;
+    position: absolute;
+
+}
+`
+
+
+.veg {
+    visibility:hidden;
+  }
+
+.nonveg {
+    visibility:hidden;
+  }
+.both {
+    visibility:hidden;
+  }
+
 input[type=checkbox]:checked ~ .veg {
+    visibility:visible;
+
+}
+
+input[type=checkbox]:checked ~ .nonveg {
+    visibility:visible;
+
+}
+
+input[type=checkbox]:checked ~ .both {
     visibility:visible;
 
 }
