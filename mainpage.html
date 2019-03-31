@@ -1,8 +1,8 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" type="text/css" href="mainpage.css">
+        
     </head>
     <body>
 
@@ -63,17 +63,13 @@
       </div>
     </div>
 
-    <script src="JavaScript.js">
-
-
-    </script>
 
 
     <div id="log" class="modal">
 
       <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
-          <span onclick="document.getElementById('log').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="login()" class="close" title="Close Modal">&times;</span>
           <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">  -->
             </div>
 
@@ -91,14 +87,14 @@
         </div>
 
         <div class="container" style="background-color:black;">
-          <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="login()" class="cancelbtn">Cancel</button>
           <span class="psw"><a href="#">Forgot password?</a></span>
         </div>
       </form>
     </div>
 
     <div id="sgn" class="modal">
-      <span onclick="document.getElementById('sgn').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="signup()" class="close" title="Close Modal">&times;</span>
       <form class="modal-content" action="/action_page.php">
         <div class="container">
           <h1 style="color:orange;">Sign Up</h1>
@@ -119,7 +115,7 @@
 
 
           <div class="clearfix">
-            <button type="button" onclick="document.getElementById('sgn').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="signup()" class="cancelbtn">Cancel</button>
             <button type="submit" class="signupbtn">Sign Up</button>
           </div>
         </div>
@@ -128,7 +124,44 @@
 
 
 
+    <script >
 
+    function login()
+    {
+    var elements = document.getElementsByTagName("input");
+    for (var ii=0; ii < elements.length; ii++) {
+      if (elements[ii].type == "text") {
+        elements[ii].value = "";
+      }
+      if(elements[ii].type=="password")
+      {
+        elements[ii].value="";
+      }
+    }
+    document.getElementById('log').style.display='none';
+  }
+
+  function signup()
+  {
+  var elements = document.getElementsByTagName("input");
+  for (var ii=0; ii < elements.length; ii++) {
+    if (elements[ii].type == "text") {
+      elements[ii].value = "";
+    }
+    if(elements[ii].type=="password")
+    {
+      elements[ii].value="";
+    }
+  }
+  document.getElementById('sgn').style.display='none';
+}
+
+
+    </script>
+
+    <script src="JavaScript.js">
+
+    </script>
 
 
   </body>
