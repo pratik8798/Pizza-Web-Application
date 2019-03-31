@@ -53,7 +53,7 @@ ul{
 }
 .image{
 
- background-image: url("DeliveryMan.jpg");
+ background-image: url("../IMAGES/DeliveryMan.jpg");
  min-height: 200px;
  min-width: 100%;
  overflow: hidden;
