@@ -9,6 +9,7 @@ body{
   font-family: Arial,sans-serif;
   background:black;
   overflow: hidden;
+  font-size: 20px;
 
 }
 ul{
@@ -85,6 +86,7 @@ ul{
   border: 1px solid orange;
   float: right;
   overflow: hidden;
+  font-size: 15px;
 
 
 }
@@ -129,6 +131,7 @@ input[type=text], input[type=password] {
 input[type=text]:focus, input[type=password]:focus {
   background-color: white;
   outline: none;
+  border:1px solid orange;
 }
 
 /* Set a style for all buttons */
