@@ -1,10 +1,10 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../CSS/mainpage.css">
+        <link rel="stylesheet" type="text/css" href="mainpage.css">
 
     </head>
-    <body onload="clear()">
+    <body>
 
         <div class="main">
             <div class="list">
@@ -26,23 +26,23 @@
             <div class="slideshow-container">
                 <div class="imageslideshow fade">
                     <div class="num">1/4</div>
-                    <img src="../IMAGES/Pizza2.jpg" style="width:100%">
+                    <img src="Pizza2.jpg" style="width:100%">
                   </div>
 
 
                 <div class="imageslideshow fade">
                     <div class="num">2/4</div>
-                    <img src="../IMAGES/Pizza1.jpg" style="width:100%">
+                    <img src="Pizza1.jpg" style="width:100%">
                   </div>
 
                 <div class="imageslideshow fade">
                     <div class="num">3/4</div>
-                    <img src="../IMAGES/Pizza3.jpg" style="width:100%" alt="not available">
+                    <img src="Pizza3.jpg" style="width:100%" alt="not available">
                 </div>
 
                 <div class="imageslideshow fade">
                     <div class="num">4/4</div>
-                    <img src="../IMAGES/Pizza4.jpg" style="width:100%">
+                    <img src="Pizza4.jpg" style="width:100%">
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -65,18 +65,16 @@
       <div class="grid">
           <table border="3" cellspacing=10>
               <tr>
-                <td style="width:33.3%"><h3><p>OUR MENU</p></h3><img src="../IMAGES/Menu-icon1.jpg" style="height:50%" alt=""><p> CHECK OUT OUR DELICIOUS PIZZAS</p>  </td>
-                <td style="width:33.3%"><h3><p>ENJOY WITH FAMILY AND FRIENDS</p></h3><img src="../IMAGES/Friends.jpg"style="height:50%"  alt=""> <p> ENJOY YOUR TIME WITH FAMILY AND FRIENDS BY BRINGING HOME OUR PIZZAS</p></td>
-                <td style="width:33.3%"><h3><p>BIRTHDAY PARTY</p></h3><img src="../IMAGES/Birthday1.jpg" style="height:50%" alt=""> <p>CELEBRATE THE JOY OF BIRTHDAYS WITH FRESH AND DELICIOUS PIZZAS</p></td>
+                <td style="width:33.3%"><h3><p>OUR MENU</p></h3><img src="Menu-icon1.jpg" style="height:50%" alt=""><p> CHECK OUT OUR DELICIOUS PIZZAS</p>  </td>
+                <td style="width:33.3%"><h3><p>ENJOY WITH FAMILY AND FRIENDS</p></h3><img src="Friends.jpg"style="height:50%"  alt=""> <p> ENJOY YOUR TIME WITH FAMILY AND FRIENDS BY BRINGING HOME OUR PIZZAS</p></td>
+                <td style="width:33.3%"><h3><p>BIRTHDAY PARTY</p></h3><img src="Birthday1.jpg" style="height:50%" alt=""> <p>CELEBRATE THE JOY OF BIRTHDAYS WITH FRESH AND DELICIOUS PIZZAS</p></td>
 
               </tr>
           </table>
       </div>
 
-      <div class="temp">
-        <iframe src="../XML/Sitemap.xml" width="100%" height="500px"></iframe>
+    </div>
 
-      </div>
 
 
     <div id="log" class="modal">
@@ -94,7 +92,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-          <button type="submit" onClick="">Login</button>
+          <button type="submit">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
@@ -115,13 +113,13 @@
           <p>Please fill in this form to create an account.</p>
           <hr>
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email"required>
+          <input type="text" placeholder="Enter Email" name="email" required>
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          <input type="password" placeholder="Enter Password" name="psw" required>
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
           <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -130,7 +128,7 @@
 
           <div class="clearfix">
             <button type="button" onclick="signup()" class="cancelbtn">Cancel</button>
-            <button type="submit" onclick="callAll()" class="signupbtn">Sign Up</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
           </div>
         </div>
       </form>
@@ -139,49 +137,6 @@
 
 
     <script >
-
-    function callAll()
-    {
-      myAlert();
-      signup();
-    }
-
-    function myAlert(){
-
-              var email = document.getElementById("email").value;
-              var password = document.getElementById("psw").value;
-              var repeat = document.getElementById("psw-repeat").value;
-              var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-              var message = "SIGN UP SUCCESSFUL";
-              var message1 = null;
-              var message2 = null;
-
-
-              /*if(name == "") {
-                  name.style.border = "1px solid red";
-                  name.focus();
-                  return false;
-              }*/
-              if(!email.match(mailformat))
-              {
-                  message1 = "You have entered an invalid email address!\n";
-              }
-              else{
-                message1="";
-              }
-              if(password != repeat)
-                  message2="Entered Passwords do not match\n";
-              else {
-                      if(password.length <8)
-                          message2="Password should be of 8 characters or more\n";
-                      else{
-                        message2="Sign Up Successful";
-                      }
-              }
-        if(message1 != null || message2 != null)
-            message = message1 + message2;
-              alert(message);
-    }
 
     function login()
     {
@@ -197,28 +152,7 @@
     }
     document.getElementById('log').style.display='none';
   }
-  function clear()
-  {
-    //alert("in")
-  var elements = document.getElementsByTagName("input");
-  for (var ii=0; ii < elements.length; ii++) {
-    if (elements[ii].type == "text") {
-      elements[ii].value = "";
-    }
-    if(elements[ii].type=="checkbox")
-    {
-      elements[ii].checked=false;
-    }
-    if(elements[ii].type=="password")
-    {
-      elements[ii].value="";
-    }
-   /*if(elements[ii].type=="radio")
-    {
-      elements[ii].checked=false;
-    }*/
-  }
-}
+
   function signup()
   {
   var elements = document.getElementsByTagName("input");
@@ -237,7 +171,7 @@
 
     </script>
 
-    <script src="../JS/JavaScript.js">
+    <script src="JavaScript.js">
 
     </script>
 

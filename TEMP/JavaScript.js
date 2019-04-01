@@ -39,18 +39,9 @@ window.onclick = function(event) {
 }
 
 
-
-function ValidateEmail(inputText)
+//function clear()
 {
-      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if(inputText.value.match(mailformat))
-      {
-        alert("LOGIN SUCCESSFUL");
-        return true;
-      }
-      else
-      {
-        alert("You have entered an invalid email address!");
-        return false;
-      }
+
+
+  
 }
