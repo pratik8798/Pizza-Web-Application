@@ -1,2 +1,2 @@
 # Pizza-Web-Application
-Front end for Pizza Web Application Mmini project using HTML, CSS, JavaScript
+Front end for Pizza Web Application mini project using HTML, CSS, JavaScript
